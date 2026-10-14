@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RUMO — Decida com segurança</title>
+  <meta name="description" content="Pesquise e compare faculdades, consulte mensalidades e bolsas, simule custos e receba recomendações feitas para o seu perfil.">
+  <meta name="theme-color" content="#030817">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/logo.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="navbar">
+  <nav class="nav" aria-label="Principal">
+    <a href="#top" class="wordmark nav-logo">rumo</a>
+    <div class="nav-links">
+      <a class="nav-link" href="#video">Vídeo</a>
+      <a class="nav-link" href="#recursos">Recursos</a>
+      <a class="nav-link" href="#simulador">Simulador</a>
+      <a class="nav-link" href="#como-funciona">Como funciona</a>
+      <a class="btn btn-sm" href="#conheca" data-open-modal>Conheça o RUMO</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <section id="top" class="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="orb orb-top"></div>
+      <div class="orb orb-mid"></div>
+      <div class="stars"></div>
+      <svg class="routes" viewBox="0 0 1440 1300" preserveAspectRatio="xMidYMin slice">
+        <g fill="none" stroke-linecap="round">
+          <path class="route" d="M-40 1060 C 200 1000, 260 760, 470 760 S 640 560, 720 520" stroke="#3B82F6" stroke-opacity=".55" stroke-width="1.5"></path>
+          <path class="route" d="M1480 1080 C 1240 1010, 1180 780, 970 770 S 800 560, 720 520" stroke="#3B82F6" stroke-opacity=".55" stroke-width="1.5"></path>
+          <path d="M-40 420 C 260 520, 380 300, 620 360" stroke="#7DA8FF" stroke-opacity=".12" stroke-width="1.2" stroke-dasharray="1 9"></path>
+          <path d="M1480 380 C 1180 480, 1060 280, 820 340" stroke="#7DA8FF" stroke-opacity=".12" stroke-width="1.2" stroke-dasharray="1 9"></path>
+        </g>
+        <circle cx="470" cy="760" r="4" fill="#7DA8FF"></circle>
+        <circle cx="970" cy="770" r="4" fill="#7DA8FF"></circle>
+      </svg>
+    </div>
+
+    <div class="container hero-content">
+      <div class="pill rise">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5 2.3-7.2-6-4.6h7.6z" fill="currentColor"></path></svg>
+        Decida com segurança.
+      </div>
+      <h1 class="hero-title rise">Sua próxima conquista começa com a <span>escolha certa.</span></h1>
+      <p class="lead rise">Pesquise e compare faculdades, consulte mensalidades e bolsas, simule custos e receba recomendações feitas para o seu perfil.</p>
+      <div class="cta-row rise">
+        <a class="btn" href="#conheca" data-open-modal>
+          Conheça o RUMO
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </a>
+        <a class="btn-ghost" href="#video">
+          <i><svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M2.5 1.2v7.6L8.6 5z" fill="#2563EB"></path></svg></i>
+          Assistir ao vídeo
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-stage">
+      <div class="tilt" id="hero-tilt">
+        <div class="phone phone-hero-left">
+          <div class="phone-in" style="--delay: .45s"><div class="phone-float" style="--float-delay: -2s">
+            <img class="edge-2" src="assets/68d53aa1ab56fb89c3723a8cc018beef.webp" alt="">
+            <img class="edge-1" src="assets/68d53aa1ab56fb89c3723a8cc018beef.webp" alt="">
+            <img class="face" src="assets/68d53aa1ab56fb89c3723a8cc018beef.webp" alt="Tela da PUC Minas com o quadro Por que recomendamos para você">
+            <span class="sheen mask-detalhes" aria-hidden="true"></span>
+          </div></div>
+        </div>
+        <div class="phone phone-hero-right">
+          <div class="phone-in" style="--delay: .55s"><div class="phone-float" style="--float-delay: -4s">
+            <img class="edge-2" src="assets/9bbc1e73ccb74aed6715a361cd2f702c.webp" alt="">
+            <img class="edge-1" src="assets/9bbc1e73ccb74aed6715a361cd2f702c.webp" alt="">
+            <img class="face" src="assets/9bbc1e73ccb74aed6715a361cd2f702c.webp" alt="Tela Comparar Universidades entre PUC Minas e UFMG">
+            <span class="sheen mask-comparacao" aria-hidden="true"></span>
+          </div></div>
+        </div>
+        <div class="phone phone-hero-center">
+          <div class="phone-in" style="--delay: .25s"><div class="phone-float">
+            <img class="edge-2" src="assets/fb6fbd630e225782ddc02931c51b15f7.webp" alt="">
+            <img class="edge-1" src="assets/fb6fbd630e225782ddc02931c51b15f7.webp" alt="">
+            <img class="face" src="assets/fb6fbd630e225782ddc02931c51b15f7.webp" alt="Tela inicial do RUMO com busca, filtros e faculdades recomendadas">
+            <span class="sheen mask-home" aria-hidden="true"></span>
+          </div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="video" class="video">
+    <div class="container">
+      <div class="video-label scroll-rise">
+        <svg width="12" height="12" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 1v8l7-4z" fill="#fff"></path></svg>
+        Assista ao vídeo do RUMO
+      </div>
+      <div class="video-frame scroll-rise" id="video-frame">
+        <video id="video-player" src="assets/RUMO_motion.mp4" controls playsinline preload="none" hidden aria-label="Vídeo de apresentação do RUMO"></video>
+        <div class="video-poster" id="video-poster">
+          <span class="wordmark video-logo">rumo</span>
+          <button class="play" id="video-play" type="button" aria-label="Reproduzir vídeo">
+            <svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"></path></svg>
+          </button>
+          <span class="video-caption">Vídeo de apresentação</span>
+          <span class="video-error" id="video-error" hidden>Não foi possível carregar o vídeo.</span>
+          <div class="video-time" aria-hidden="true"><span>0:00</span><b></b><span>--:--</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="desafio" class="reveal">
+    <div class="container reveal-inner">
+      <div class="pill">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"></circle><path d="M12 7v6l3 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
+        O desafio
+      </div>
+      <p class="reveal-text" id="reveal-text" data-highlight="Escolher">Nota de corte, mensalidade, bolsa, nota do MEC, distância. Cada informação em um site diferente. Escolher sua faculdade não precisa ser tão confuso.</p>
+    </div>
+  </section>
+
+  <section class="marquee" aria-label="Fatores que o RUMO considera">
+    <div class="marquee-row" data-start="1" data-items="Nota de corte|Mensalidade|Bolsas e descontos|Nota MEC|Distância|Modalidade"></div>
+    <div class="marquee-row reverse" data-start="7" data-items="Duração do curso|Pública ou particular|Compatibilidade|Viabilidade|Renda familiar|Nota do Enem"></div>
+  </section>
+
+  <section id="recursos">
+    <div class="container features">
+
+      <article class="feature">
+        <div class="feature-text scroll-rise">
+          <span class="pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z" fill="currentColor"></path></svg>
+            Recomendações
+          </span>
+          <h3>Indicações feitas para o seu perfil.</h3>
+          <p>O RUMO cruza sua nota do Enem, a modalidade que você prefere, a nota do MEC e a renda familiar, e explica por que cada faculdade combina com você.</p>
+          <div class="ticks"><span>Nota do Enem</span><span>Modalidade</span><span>Nota MEC</span><span>Renda familiar</span></div>
+        </div>
+        <div class="stage" style="--hover-y: -8deg">
+          <div class="stage-glow" style="--glow: rgba(37,99,235,.5)"></div>
+          <svg class="stage-ring" viewBox="0 0 600 600" aria-hidden="true"><g fill="none" stroke="#7DA8FF" stroke-opacity=".14"><circle cx="300" cy="300" r="200"></circle><circle cx="300" cy="300" r="290" stroke-dasharray="2 8"></circle></g></svg>
+          <div class="stage-hover"><div class="stage-enter" style="--enter-y: 30deg">
+            <div class="phone phone-rec-back">
+              <div class="phone-float" style="--float-delay: -3s">
+                <img class="edge-2" src="assets/fb6fbd630e225782ddc02931c51b15f7.webp" alt="">
+                <img class="edge-1" src="assets/fb6fbd630e225782ddc02931c51b15f7.webp" alt="">
+                <img class="face" src="assets/fb6fbd630e225782ddc02931c51b15f7.webp" alt="Lista Recomendado para você">
+                <span class="sheen mask-home" aria-hidden="true"></span>
+              </div>
+            </div>
+            <div class="phone phone-rec-front">
+              <div class="phone-float">
+                <img class="edge-2" src="assets/68d53aa1ab56fb89c3723a8cc018beef.webp" alt="">
+                <img class="edge-1" src="assets/68d53aa1ab56fb89c3723a8cc018beef.webp" alt="">
+                <img class="face" src="assets/68d53aa1ab56fb89c3723a8cc018beef.webp" alt="Detalhe da PUC Minas com os motivos da recomendação">
+                <span class="sheen mask-detalhes" aria-hidden="true"></span>
+              </div>
+            </div>
+          </div></div>
+          <div class="glass" style="left: 4%; top: 22%">
+            <i><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z" fill="#fff"></path></svg></i>
+            <div><small>Nota MEC</small>4,0 · PUC Minas</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="feature reverse">
+        <div class="feature-text scroll-rise">
+          <span class="pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="7" height="14" rx="2" stroke="currentColor" stroke-width="2"></rect><rect x="14" y="5" width="7" height="14" rx="2" stroke="currentColor" stroke-width="2"></rect></svg>
+            Comparação
+          </span>
+          <h3>Lado a lado, sem planilha.</h3>
+          <p>Coloque faculdades frente a frente e veja na hora qual tem mais compatibilidade, qual é mais viável e qual fica mais perto de casa.</p>
+          <div class="ticks"><span>Compatibilidade</span><span>Viabilidade</span><span>Distância no mapa</span></div>
+        </div>
+        <div class="stage" style="--hover-y: 8deg">
+          <div class="stage-glow" style="--glow: rgba(56,189,248,.36)"></div>
+          <svg class="stage-ring" viewBox="0 0 600 600" aria-hidden="true"><g fill="none" stroke="#7DD3FC" stroke-opacity=".14"><circle cx="300" cy="300" r="200"></circle><circle cx="300" cy="300" r="290" stroke-dasharray="2 8"></circle></g></svg>
+          <div class="stage-hover"><div class="stage-enter" style="--enter-y: -30deg">
+            <div class="phone phone-compare">
+              <div class="phone-float" style="--float-delay: -1s">
+                <img class="edge-2" src="assets/9bbc1e73ccb74aed6715a361cd2f702c.webp" alt="">
+                <img class="edge-1" src="assets/9bbc1e73ccb74aed6715a361cd2f702c.webp" alt="">
+                <img class="face" src="assets/9bbc1e73ccb74aed6715a361cd2f702c.webp" alt="Comparar Universidades: resumo, mapa e detalhes de PUC Minas e UFMG">
+                <span class="sheen mask-comparacao" aria-hidden="true"></span>
+              </div>
+            </div>
+          </div></div>
+          <div class="glass" style="right: 6%; top: 30%; animation-delay: -2s">
+            <i><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z" fill="#fff"></path></svg></i>
+            <div><small>Compatibilidade</small>PUC Minas · 95%</div>
+          </div>
+          <div class="glass" style="left: 6%; bottom: 20%; animation-delay: -4s">
+            <i class="orange"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 00-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z" fill="#fff"></path></svg></i>
+            <div><small>Mais perto</small>PUC Minas · 0.6 km</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="feature">
+        <div class="feature-text scroll-rise">
+          <span class="pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></svg>
+            Chat com IA
+          </span>
+          <h3>Pergunte. O RUMO explica.</h3>
+          <p>Tire dúvidas sobre o app e as faculdades cadastradas: por que uma opção foi recomendada, ou por que ela pode ser melhor que outra para você.</p>
+        </div>
+        <div class="stage" style="--hover-y: -8deg">
+          <div class="stage-glow" style="--glow: rgba(99,102,241,.45)"></div>
+          <svg class="stage-ring" viewBox="0 0 600 600" aria-hidden="true"><g fill="none" stroke="#A5B4FC" stroke-opacity=".14"><circle cx="300" cy="300" r="200"></circle><circle cx="300" cy="300" r="290" stroke-dasharray="2 8"></circle></g></svg>
+          <div class="stage-hover"><div class="stage-enter" style="--enter-y: 30deg">
+            <div class="phone phone-chat">
+              <div class="phone-float" style="--float-delay: -5s">
+                <img class="edge-2" src="assets/a8407707a28e6905cf2f9164b0fdac3a.webp" alt="">
+                <img class="edge-1" src="assets/a8407707a28e6905cf2f9164b0fdac3a.webp" alt="">
+                <img class="face" src="assets/a8407707a28e6905cf2f9164b0fdac3a.webp" alt="Chat com IA explicando a recomendação da PUC Minas">
+                <span class="sheen mask-chat" aria-hidden="true"></span>
+              </div>
+            </div>
+          </div></div>
+          <div class="bubble question" style="right: 2%; top: 20%">E porque ela é melhor que a UFMG para mim?</div>
+          <div class="bubble answer" style="left: 0%; top: 50%; animation-delay: -3s">A PUC Minas fica muito mais perto da sua casa, a 0.6 km contra 7.9 km da UFMG…</div>
+          <div class="typing" style="left: 10%; top: 72%" aria-hidden="true"><span></span><span></span><span></span></div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="simulador" class="simulator">
+    <div class="container simulator-grid">
+      <div class="simulator-main">
+        <div class="feature-text scroll-rise">
+          <span class="pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
+            Custos e bolsas
+          </span>
+          <h3>Quanto vai custar? Simule agora.</h3>
+          <p>Mexa na mensalidade, na duração e na bolsa. No app, a simulação já parte da mensalidade e da duração oficial de cada oferta.</p>
+        </div>
+
+        <form class="sim-card scroll-rise" id="sim-form" onsubmit="return false">
+          <div class="field">
+            <div class="field-row">
+              <label for="sim-mensalidade">Mensalidade</label>
+              <output id="sim-mensalidade-out" for="sim-mensalidade">R$ 2.100,00</output>
+            </div>
+            <input id="sim-mensalidade" class="range" type="range" min="300" max="8000" step="50" value="2100">
+          </div>
+
+          <div class="field">
+            <div class="field-row">
+              <label for="sim-bolsa">Bolsa / desconto</label>
+              <output id="sim-bolsa-out" for="sim-bolsa">20%</output>
+            </div>
+            <input id="sim-bolsa" class="range" type="range" min="0" max="100" step="5" value="20">
+          </div>
+
+          <div class="field">
+            <div class="field-row">
+              <span class="field-label">Duração do curso</span>
+              <span class="field-hint" id="sim-meses">48 meses</span>
+            </div>
+            <div class="stepper">
+              <button class="stepper-btn" id="sim-menos" type="button" aria-label="Diminuir duração">
+                <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 7h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
+              </button>
+              <strong id="sim-anos">4 anos</strong>
+              <button class="stepper-btn" id="sim-mais" type="button" aria-label="Aumentar duração">
+                <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 7h10M7 2v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="result" aria-live="polite">
+            <div class="result-line"><span>Custo total estimado (sem bolsa)</span><b id="sim-total-sem"></b></div>
+            <div class="result-line"><span>Mensalidade com bolsa (<span id="sim-bolsa-txt"></span>)</span><b id="sim-mensal-com"></b></div>
+            <div class="result-total">
+              <span>Custo total estimado<br>com bolsa</span>
+              <strong id="sim-total-com"></strong>
+            </div>
+            <span class="save" id="sim-economia"></span>
+          </div>
+        </form>
+      </div>
+
+      <div class="sim-visual">
+        <div class="stage-glow" style="--glow: rgba(37,99,235,.42)"></div>
+        <div class="stage-enter" style="--enter-y: -30deg">
+          <div class="phone phone-sim">
+            <div class="phone-float" style="--float-delay: -2s">
+              <img class="edge-2" src="assets/9e865d0752c8f1740cb27f007f777b22.webp" alt="">
+              <img class="edge-1" src="assets/9e865d0752c8f1740cb27f007f777b22.webp" alt="">
+              <img class="face" src="assets/9e865d0752c8f1740cb27f007f777b22.webp" alt="Simular custo da graduação no app RUMO">
+              <span class="sheen mask-simulacao" aria-hidden="true"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="como-funciona" class="how">
+    <div class="container">
+      <div class="how-head scroll-rise">
+        <span class="pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 19c4 0 4-14 8-14s4 14 8 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
+          Como funciona
+        </span>
+        <h2 class="title">Três passos até a escolha certa.</h2>
+      </div>
+
+      <div class="track" aria-hidden="true"><span class="track-dot"></span></div>
+
+      <ol class="steps">
+        <li class="step scroll-rise">
+          <span class="step-node" aria-hidden="true"></span>
+          <span class="step-num">01</span>
+          <h3>Informe seu perfil.</h3>
+          <p>Conte sua nota do Enem, suas preferências e o curso que você quer.</p>
+          <div class="step-card">
+            <i><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"></circle><path d="M4 21c0-4 4-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg></i>
+            <span>Ainda em dúvida? O RUMO ajuda a descobrir o curso mais compatível.</span>
+          </div>
+        </li>
+        <li class="step scroll-rise">
+          <span class="step-node" aria-hidden="true"></span>
+          <span class="step-num">02</span>
+          <h3>Explore e compare suas opções.</h3>
+          <p>Busque cursos, veja as recomendações e coloque faculdades lado a lado.</p>
+          <div class="step-card">
+            <i><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"></circle><path d="M16 16l4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg></i>
+            <span>Simule custos com bolsa e tire dúvidas no chat com IA.</span>
+          </div>
+        </li>
+        <li class="step scroll-rise">
+          <span class="step-node" aria-hidden="true"></span>
+          <span class="step-num">03</span>
+          <h3>Decida com mais segurança.</h3>
+          <p>Escolha com tudo à vista: compatibilidade, custos, distância e qualidade.</p>
+          <div class="step-card">
+            <i><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></i>
+            <span>Salve suas opções favoritas e volte a elas quando quiser.</span>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="conheca" class="final">
+    <div class="orb" aria-hidden="true"></div>
+    <div class="container final-content">
+      <img class="app-icon" src="assets/logo.png" alt="Ícone do app RUMO">
+      <h2 class="scroll-rise">Decida com segurança.</h2>
+      <p class="lead scroll-rise">Sua próxima conquista começa com a escolha certa. O RUMO te ajuda a chegar lá.</p>
+      <div class="cta-row scroll-rise">
+        <a class="btn" href="#conheca" data-open-modal>
+          Conheça o RUMO
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="container">
+  <div class="footer">
+    <div class="footer-brand">
+      <a href="#top" class="wordmark footer-logo">rumo</a>
+      <span class="fine">© 2026 RUMO · Decida com segurança.</span>
+    </div>
+    <nav class="footer-links" aria-label="Rodapé">
+      <a class="nav-link" href="#video">Vídeo</a>
+      <a class="nav-link" href="#recursos">Recursos</a>
+      <a class="nav-link" href="#simulador">Simulador</a>
+      <a class="nav-link" href="#como-funciona">Como funciona</a>
+    </nav>
+  </div>
+</footer>
+
+<dialog class="modal" id="coming-soon" aria-labelledby="coming-soon-title">
+  <div class="modal-body">
+    <button class="modal-close" type="button" aria-label="Fechar" data-close-modal>
+      <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 2l10 10M12 2L2 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
+    </button>
+    <img class="modal-icon" src="assets/logo.png" alt="">
+    <h2 id="coming-soon-title">Em breve na Apple Store e no Google Play.</h2>
+    <p>Estamos finalizando os últimos detalhes. Em breve o RUMO estará disponível para você baixar.</p>
+    <button class="btn" type="button" data-close-modal>Entendi</button>
+  </div>
+</dialog>
+
+</body>
+</html>
