@@ -183,6 +183,235 @@ function initSimulator() {
   render();
 }
 
+function initQuiz() {
+  const card = document.getElementById('quiz');
+  if (!card) return;
+
+  const POINTS_PER_ANSWER = 3;
+
+  const C = {
+    cc: 'Ciência da Computação',
+    si: 'Sistemas de Informação',
+    adm: 'Administração',
+    dir: 'Direito',
+    med: 'Medicina',
+    eciv: 'Engenharia Civil',
+    eprod: 'Engenharia de Produção',
+    psi: 'Psicologia',
+    enf: 'Enfermagem',
+    arq: 'Arquitetura e Urbanismo'
+  };
+
+  const QUESTIONS = [
+    { text: 'Qual afirmação mais combina com você?', options: [
+      ['Gosto de resolver problemas lógicos e criar soluções passo a passo', C.cc],
+      ['Tenho facilidade em organizar dados e integrar sistemas', C.si],
+      ['Gosto de liderar pessoas e tomar decisões estratégicas', C.adm],
+      ['Tenho interesse em leis, normas e defesa de direitos', C.dir]
+    ] },
+    { text: 'Em um trabalho em grupo, qual função você assume naturalmente?', options: [
+      ['Desenvolvo a parte técnica ou o algoritmo da solução', C.cc],
+      ['Cuido da integração entre as ferramentas e os dados do projeto', C.si],
+      ['Organizo prazos, tarefas e a comunicação entre a equipe', C.adm],
+      ['Reviso regras, contratos e responsabilidades do projeto', C.dir]
+    ] },
+    { text: 'O que mais te motivaria numa carreira?', options: [
+      ['Criar tecnologia que resolva problemas complexos', C.cc],
+      ['Unir tecnologia e gestão para melhorar processos de negócio', C.si],
+      ['Empreender e conduzir decisões estratégicas', C.adm],
+      ['Atuar em causas justas e na resolução de conflitos', C.dir]
+    ] },
+    { text: 'Qual tema desperta mais sua curiosidade?', options: [
+      ['Inteligência artificial e desenvolvimento de software', C.cc],
+      ['Como a tecnologia impulsiona o crescimento das empresas', C.si],
+      ['Estratégias de negócio e empreendedorismo', C.adm],
+      ['Casos jurídicos e o funcionamento das leis', C.dir]
+    ] },
+    { text: 'Qual atividade te traria mais satisfação profissional?', options: [
+      ['Cuidar da saúde e do bem-estar de outras pessoas', C.med],
+      ['Projetar e acompanhar a construção de uma obra', C.eciv],
+      ['Otimizar processos e a produtividade de uma linha de produção', C.eprod],
+      ['Compreender o comportamento humano e apoiar emocionalmente alguém', C.psi]
+    ] },
+    { text: 'No seu tempo livre, você prefere se aprofundar em:', options: [
+      ['Assuntos relacionados ao corpo humano e à saúde', C.med],
+      ['Estruturas, cálculos e projetos de construção', C.eciv],
+      ['Formas de melhorar processos e reduzir desperdícios', C.eprod],
+      ['Comportamento humano e relações interpessoais', C.psi]
+    ] },
+    { text: 'Que tipo de impacto você gostaria de gerar no mundo?', options: [
+      ['Contribuir para salvar ou melhorar vidas', C.med],
+      ['Construir cidades e espaços mais funcionais', C.eciv],
+      ['Tornar indústrias e processos mais eficientes', C.eprod],
+      ['Melhorar a saúde mental e o bem-estar das pessoas', C.psi]
+    ] },
+    { text: 'Qual conteúdo você assistiria com mais interesse?', options: [
+      ['Avanços científicos na área da medicina', C.med],
+      ['Documentário sobre grandes obras de engenharia', C.eciv],
+      ['Como indústrias produzem em larga escala', C.eprod],
+      ['Como funciona a mente e o comportamento humano', C.psi]
+    ] },
+    { text: 'Qual rotina de trabalho combina mais com seu perfil?', options: [
+      ['Cuidar diretamente de pacientes no dia a dia', C.enf],
+      ['Criar espaços esteticamente agradáveis e funcionais', C.arq],
+      ['Desenvolver soluções e sistemas de software', C.cc],
+      ['Gerenciar a infraestrutura de tecnologia de uma empresa', C.si]
+    ] },
+    { text: 'O que você mais valoriza em uma profissão?', options: [
+      ['O cuidado direto e humano com as pessoas', C.enf],
+      ['A criatividade e a estética aplicadas ao espaço', C.arq],
+      ['A inovação e o raciocínio tecnológico', C.cc],
+      ['A organização e a eficiência de processos digitais', C.si]
+    ] },
+    { text: 'Qual área de estudo mais te atrai?', options: [
+      ['Biologia e ciências da saúde', C.enf],
+      ['Artes, desenho e representação espacial', C.arq],
+      ['Matemática, lógica e algoritmos', C.cc],
+      ['Informática e infraestrutura de sistemas', C.si]
+    ] },
+    { text: 'Se pudesse mudar algo no mundo, você escolheria:', options: [
+      ['Melhorar o acesso e a qualidade da saúde pública', C.enf],
+      ['Melhorar o planejamento dos espaços urbanos', C.arq],
+      ['Criar tecnologia que facilite a vida das pessoas', C.cc],
+      ['Digitalizar e simplificar processos manuais', C.si]
+    ] },
+    { text: 'Você se identifica mais com o perfil de quem:', options: [
+      ['Gerencia uma equipe ou conduz um negócio', C.adm],
+      ['Interpreta e aplica normas e legislações', C.dir],
+      ['Diagnostica e cuida da saúde de pacientes', C.med],
+      ['Planeja e executa projetos de construção', C.eciv]
+    ] },
+    { text: 'Qual situação te motivaria mais no trabalho?', options: [
+      ['Fechar um bom negócio ou uma parceria estratégica', C.adm],
+      ['Resolver um conflito com justiça e imparcialidade', C.dir],
+      ['Contribuir para a recuperação da saúde de alguém', C.med],
+      ['Ver uma obra de engenharia sendo concluída', C.eciv]
+    ] },
+    { text: 'Qual tipo de conteúdo você escolheria para se atualizar?', options: [
+      ['Tendências de mercado e empreendedorismo', C.adm],
+      ['Análises de casos e decisões jurídicas', C.dir],
+      ['Novidades da área da saúde', C.med],
+      ['Projetos de infraestrutura e construção civil', C.eciv]
+    ] },
+    { text: 'O que mais chama sua atenção no dia a dia?', options: [
+      ['Estratégia, finanças e gestão', C.adm],
+      ['Direitos, deveres e regras da sociedade', C.dir],
+      ['O funcionamento do corpo humano', C.med],
+      ['Como prédios, pontes e estruturas são construídos', C.eciv]
+    ] },
+    { text: 'Você se imagina mais atuando em:', options: [
+      ['Melhoria contínua de processos industriais', C.eprod],
+      ['Compreensão de emoções e comportamentos humanos', C.psi],
+      ['Cuidado direto com pacientes em tratamento', C.enf],
+      ['Concepção e projeto de novos espaços', C.arq]
+    ] },
+    { text: 'Qual desses desafios parece mais interessante pra você?', options: [
+      ['Reduzir desperdício e aumentar a eficiência de uma produção', C.eprod],
+      ['Ajudar alguém a lidar com ansiedade ou outro desafio emocional', C.psi],
+      ['Fazer diferença direta na recuperação de um paciente', C.enf],
+      ['Repensar o layout e a funcionalidade de um espaço', C.arq]
+    ] },
+    { text: 'Se fosse apresentar um projeto, o tema seria:', options: [
+      ['Gestão da qualidade e produtividade industrial', C.eprod],
+      ['Saúde mental e bem-estar psicológico', C.psi],
+      ['Boas práticas de cuidado e enfermagem', C.enf],
+      ['Arquitetura sustentável e uso do espaço', C.arq]
+    ] },
+    { text: 'O que te traria mais realização profissional?', options: [
+      ['Ver processos ficarem mensuravelmente mais eficientes', C.eprod],
+      ['Ajudar pessoas a se compreenderem melhor', C.psi],
+      ['Fazer diferença real na vida de um paciente', C.enf],
+      ['Criar um projeto arquitetônico marcante', C.arq]
+    ] }
+  ];
+
+  // pontuação máxima possível por curso (cada pergunta soma uma vez por curso presente)
+  const maxScores = {};
+  QUESTIONS.forEach((question) => {
+    new Set(question.options.map(([, course]) => course)).forEach((course) => {
+      maxScores[course] = (maxScores[course] || 0) + POINTS_PER_ANSWER;
+    });
+  });
+
+  const el = {
+    intro: document.getElementById('quiz-intro'),
+    step: document.getElementById('quiz-step'),
+    result: document.getElementById('quiz-result'),
+    start: document.getElementById('quiz-start'),
+    restart: document.getElementById('quiz-restart'),
+    count: document.getElementById('quiz-count'),
+    bar: document.getElementById('quiz-bar'),
+    barFill: document.getElementById('quiz-bar-fill'),
+    question: document.getElementById('quiz-question'),
+    options: document.getElementById('quiz-options'),
+    resultName: document.getElementById('quiz-result-name'),
+    resultMatch: document.getElementById('quiz-result-match')
+  };
+
+  const state = { index: 0, scores: {} };
+
+  const show = (view) => {
+    el.intro.hidden = view !== 'intro';
+    el.step.hidden = view !== 'step';
+    el.result.hidden = view !== 'result';
+  };
+
+  const renderQuestion = () => {
+    const question = QUESTIONS[state.index];
+    const total = QUESTIONS.length;
+
+    el.count.textContent = `Pergunta ${state.index + 1} de ${total}`;
+    el.barFill.style.width = ((state.index + 1) / total) * 100 + '%';
+    el.bar.setAttribute('aria-valuenow', String(state.index + 1));
+    el.question.textContent = question.text;
+
+    el.options.replaceChildren(
+      ...question.options.map(([text, course]) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'quiz-option';
+        button.textContent = text;
+        button.addEventListener('click', () => answer(course));
+        return button;
+      })
+    );
+
+    el.question.focus({ preventScroll: true });
+  };
+
+  const renderResult = () => {
+    const [course, percent] = Object.entries(maxScores)
+      .map(([name, max]) => [name, ((state.scores[name] || 0) / max) * 100])
+      .sort((a, b) => b[1] - a[1])[0];
+
+    el.resultName.textContent = course;
+    el.resultMatch.textContent = Math.round(percent) + '% de compatibilidade';
+    show('result');
+    el.result.focus({ preventScroll: true });
+  };
+
+  const answer = (course) => {
+    state.scores[course] = (state.scores[course] || 0) + POINTS_PER_ANSWER;
+
+    if (state.index < QUESTIONS.length - 1) {
+      state.index += 1;
+      renderQuestion();
+    } else {
+      renderResult();
+    }
+  };
+
+  const begin = () => {
+    state.index = 0;
+    state.scores = {};
+    show('step');
+    renderQuestion();
+  };
+
+  el.start.addEventListener('click', begin);
+  el.restart.addEventListener('click', begin);
+}
+
 function initModal() {
   const modal = document.getElementById('coming-soon');
   if (!modal) return;
@@ -208,4 +437,5 @@ initVideo();
 initRevealText();
 initMarquee();
 initSimulator();
+initQuiz();
 initModal();

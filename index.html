@@ -311,6 +311,56 @@
     </div>
   </section>
 
+  <section id="teste" class="quiz">
+    <div class="container">
+      <div class="quiz-head scroll-rise">
+        <span class="pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"></circle><path d="M15.5 8.5l-2 5-5 2 2-5z" fill="currentColor"></path></svg>
+          Teste vocacional
+        </span>
+        <h2 class="title">Descubra seu curso.</h2>
+        <p class="lead">O mesmo teste vocacional do app, direto no site.</p>
+      </div>
+
+      <div class="quiz-card scroll-rise" id="quiz">
+        <div class="quiz-intro" id="quiz-intro">
+          <i class="quiz-icon">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"></circle><path d="M15.5 8.5l-2 5-5 2 2-5z" fill="currentColor"></path></svg>
+          </i>
+          <h3>Descubra seu Curso</h3>
+          <p>Faça um teste vocacional de 20 perguntas para descobrir o melhor curso compatível com seu perfil e já veja faculdades relacionadas.</p>
+          <button class="btn" id="quiz-start" type="button">
+            Iniciar
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </button>
+        </div>
+
+        <div class="quiz-step" id="quiz-step" hidden>
+          <span class="field-hint" id="quiz-count" aria-live="polite"></span>
+          <div class="quiz-bar" id="quiz-bar" role="progressbar" aria-label="Progresso do teste" aria-valuemin="0" aria-valuemax="20"><span id="quiz-bar-fill"></span></div>
+          <h3 class="quiz-question" id="quiz-question" tabindex="-1"></h3>
+          <div class="quiz-options" id="quiz-options"></div>
+        </div>
+
+        <div class="quiz-result" id="quiz-result" tabindex="-1" hidden>
+          <i class="quiz-icon">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 4h10v5a5 5 0 01-10 0zM7 6H4v1.5A3.5 3.5 0 007.5 11M17 6h3v1.5A3.5 3.5 0 0116.5 11M12 14v4M8.5 20h7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </i>
+          <span class="quiz-kicker">Curso mais compatível com você</span>
+          <strong class="quiz-result-name" id="quiz-result-name"></strong>
+          <span class="quiz-match" id="quiz-result-match"></span>
+          <div class="cta-row">
+            <a class="btn" href="#conheca" data-open-modal>
+              Ver faculdades
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </a>
+            <button class="btn-ghost" id="quiz-restart" type="button">Refazer o teste</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="como-funciona" class="how">
     <div class="container">
       <div class="how-head scroll-rise">
